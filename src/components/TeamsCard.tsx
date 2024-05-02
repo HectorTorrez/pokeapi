@@ -59,7 +59,13 @@ export const CardBody = ({
 
   return (
     <>
-      <div className="flex flex-col items-center align-middle relative">
+      <div
+        className="flex flex-col items-center align-middle relative hover:cursor-pointer bg-card-foreground text-card"
+        onDoubleClick={() => {
+          confirm("Estas seguro de eliminar el pokemon?") &&
+            deletePokemon(teamId, id);
+        }}
+      >
         <img
           alt="Pikachu"
           className="rounded-full"
@@ -77,7 +83,7 @@ export const CardBody = ({
             {t.type.name}
           </span>
         ))}
-        <DeleteButton
+        {/* <DeleteButton
           onDelete={() => {
             confirm("Estas seguro de eliminar el pokemon?") &&
               deletePokemon(teamId, id);
@@ -85,7 +91,7 @@ export const CardBody = ({
           className=" text-red-400 rounded-xl p-1 absolute top-0 right-0 z-10"
         >
           <Delete />
-        </DeleteButton>
+        </DeleteButton> */}
       </div>
     </>
   );

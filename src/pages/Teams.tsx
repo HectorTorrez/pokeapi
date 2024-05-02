@@ -15,10 +15,8 @@ export function Teams() {
     alert("Equipo creado");
   };
 
-  console.log("prueba");
-
   return (
-    <section className="w-[1500px] m-auto">
+    <section className="max-w-[1500px] m-auto">
       <Navbar />
 
       <div className="container mx-auto p-4">
@@ -50,7 +48,7 @@ export function Teams() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mb-3">
         {teams?.map((team) => (
           <TeamsCard key={team.id} pokemonTeam={team} />
         ))}

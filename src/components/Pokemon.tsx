@@ -22,7 +22,7 @@ export function Pokemon() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <section className="border border-gray-50 flex justify-center flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out md:flex-row">
+        <section className="border border-gray-50 flex justify-center flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out md:flex-row gap-5">
           <div className="h-72 mr-2">
             <p className="font-bold text-2xl">{PokemonInfo?.name}</p>
             <img
@@ -57,7 +57,7 @@ export function Pokemon() {
               ))}
             </div>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[50%]">
             <SelectTeam pokemon={PokemonInfo as unknown as IPokemonTeams} />
           </div>
         </section>
